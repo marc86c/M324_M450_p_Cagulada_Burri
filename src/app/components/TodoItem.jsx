@@ -23,7 +23,7 @@ const TodoItem = (props) => {
     textDecoration: "line-through",
   };
 
-  const { completed, id, title } = props.todo;
+  const { completed, id, title, priority } = props.todo;
 
   const viewMode = {};
   const editMode = {};
@@ -50,6 +50,12 @@ const TodoItem = (props) => {
           checked={completed}
           onChange={() => props.handleChangeProps(id)}
           name="checkbox"
+        />
+        <input
+          type="number"
+          value={priority || ""}
+          onChange={(e) => props.changePriority(id, e.target.value)}
+          className={styles.priorityInput} // Optional: CSS-Klasse für Styling
         />
         <button
           data-set="delete-todo-btn"

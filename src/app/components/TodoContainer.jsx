@@ -39,6 +39,14 @@ const TodoContainer = () => {
     setTodos([...todos.filter((todo) => todo.id !== id)]);
   };
 
+  const changePriority = (id, newPriority) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, priority: newPriority } : todo
+      )
+    );
+  };
+
   const addTodoItem = (title) => {
     const newTodo = {
       id: uuidv4(),
@@ -74,6 +82,7 @@ const TodoContainer = () => {
         handleChangeProps={handleChange}
         deleteTodoProps={delTodo}
         setUpdate={setUpdate}
+        changePriority={changePriority}
       />
     </div>
   );
