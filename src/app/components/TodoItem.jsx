@@ -51,12 +51,13 @@ const TodoItem = (props) => {
           onChange={() => props.handleChangeProps(id)}
           name="checkbox"
         />
-        <input
-          type="number"
-          value={priority || ""}
-          onChange={(e) => props.changePriority(id, e.target.value)}
-          className={styles.priorityInput} // Optional: CSS-Klasse für Styling
-        />
+
+          <input
+            type="number"
+            value={priority || ""}
+            onChange={(e) => props.changePriority(id, e.target.value)}
+            className={styles.textInputPriority}
+          />
         <button
           data-set="delete-todo-btn"
           onClick={() => props.deleteTodoProps(id)}
