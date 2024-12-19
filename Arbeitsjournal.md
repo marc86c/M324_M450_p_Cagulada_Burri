@@ -9,3 +9,14 @@ Wir kamen gut mit unseren Arbeiten voran, wir teilten uns auf, so dass wir nicht
 
 ##12.12.2024
 ###Aufgaben
+An diesem Tag haben wir das Arbeitsjournal von letztem Mal nachgeholt und das Testkonzept fast fertig erstellt. Aussderdem haben wir die Pipeline eingerichtet und die 1. User-Story abgeschlossen. Bei der User-Story ging es um die Priorisierung der Todo-Items. Das UX hat noch deutlich Verbesserungspotenzial, funktioniert aber.
+
+###Reflexion
+Wir haben konzentriert an unseren Aufgaben gearbeitet. Die Kommunikation verlief flüssig und hat zu keinen Problemen geführt. Dagegen die Implementierung der Pipeline hat und Kopfschmerzen bereitet, denn die Abhängigkeiten haben viele Fehler geschmiessen. Schlussendlich konnte aber alles erledigt werden. 
+
+##19.12.2024
+###Aufgaben
+An diesem Tag war Herr Burri krank, darum konnte nur Herr Cagulada daran arbeiten (auch nicht zu viel da er mehr im anderen Projekt gemacht hat). Er hat das Arbeitsjournal von letztem Mal nachgeholt und von diesem mal gschrieben. Ausserdem haben wir das Arbeitsjournal und das Testkonzept in das Git-Repo eingecheckt.
+
+###Reflexion
+Dieses Mal konnte nicht viel erledigt werden, da nur ein Teammitglied abwesend war und noch andere Projekte im Weg standen. Das nächte Mal müssen wir deutlich mehr an diesem Projekt arbeiten, um gut voranzukommen.
