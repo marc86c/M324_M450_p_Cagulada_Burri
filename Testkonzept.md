@@ -65,7 +65,7 @@
 
 ---
 
-### 1.4 Die Aufgaben können nach Priorität sortiert werden, sodass "hohe" Priorität ganz oben erscheint.
+### 1.4 Die Aufgaben können nach Priorität sortiert werden, sodass Aufgaben mit der Priorität "1" ganz oben erscheint.
 
 **Komponenten:** TodoContainer, TodosList  
 **Testfälle:**
