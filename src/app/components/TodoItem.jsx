@@ -78,7 +78,7 @@ const TodoItem = (props) => {
           <FaTrash style={{ color: "orangered", fontSize: "16px" }} />
         </button>
         <span style={completed ? completedStyle : null}>{title}</span>
-        <span className={styles.dueDate} style={duestyle}>
+        <span className={styles.dueDate} style={duestyle} data-testid={`dueDate-${new Date(dueDate).getFullYear()}`}>
           {` - ${dueDate}` ? ` - Due: ${new Date(dueDate).toLocaleDateString()}` : ""}
         </span>
       </div>

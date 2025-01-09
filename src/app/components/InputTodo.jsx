@@ -70,6 +70,7 @@ const InputTodo = (props) => {
         }}
       />
       <input
+        data-testid="dueDate-add"
         type="date"
         className="input-date"
         value={inputText.dueDate}
