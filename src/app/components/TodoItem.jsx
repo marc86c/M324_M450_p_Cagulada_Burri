@@ -5,6 +5,7 @@ import styles from "./TodoItem.module.css";
 
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
+  const [isNearDeadline, setIsNearDeadline] = useState(false);
 
   const handleEditing = () => {
     setEditing(true);
@@ -23,7 +24,21 @@ const TodoItem = (props) => {
     textDecoration: "line-through",
   };
 
-  const { completed, id, title, priority } = props.todo;
+  const duestyle = {
+    paddingleft: "10%",
+  };
+
+  const { completed, id, title, priority, dueDate } = props.todo;
+
+  // Überprüfen, ob das Fälligkeitsdatum innerhalb der nächsten 24 Stunden liegt
+  useEffect(() => {
+    if (dueDate) {
+      const dueDateObj = new Date(dueDate);
+      const now = new Date();
+      const timeDiff = dueDateObj - now;
+      setIsNearDeadline(timeDiff <= 24 * 60 * 60 * 1000 && timeDiff >= 0);
+    }
+  }, [dueDate]);
 
   const viewMode = {};
   const editMode = {};
@@ -34,15 +49,12 @@ const TodoItem = (props) => {
     editMode.display = "none";
   }
 
-  useEffect(
-    () => () => {
-      console.log("Cleaning up...");
-    },
-    []
-  );
-
   return (
-    <li className={styles.item} data-type="todo-item" >
+    <li
+      className={styles.item}
+      data-type="todo-item"
+      style={isNearDeadline ? { backgroundColor: "lightcoral" } : {}}
+    >
       <div onDoubleClick={handleEditing} style={viewMode}>
         <input
           type="checkbox"
@@ -66,9 +78,12 @@ const TodoItem = (props) => {
           <FaTrash style={{ color: "orangered", fontSize: "16px" }} />
         </button>
         <span style={completed ? completedStyle : null}>{title}</span>
+        <span className={styles.dueDate} style={duestyle}>
+          {` - ${dueDate}` ? ` - Due: ${new Date(dueDate).toLocaleDateString()}` : ""}
+        </span>
       </div>
       <input
-      data-testid={`input-${title}`}
+        data-testid={`input-${title}`}
         type="text"
         style={editMode}
         className={styles.textInput}
