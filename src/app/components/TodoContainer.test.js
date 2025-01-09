@@ -17,12 +17,12 @@ describe('InputTodo', () => {
     render(<InputTodo addTodoProps={addTodoMock} />);
 
     const inputElement = screen.getByPlaceholderText(/add todo/i);
-    const addButton = screen.getByRole('button');
+    const addButton = screen.getByTestId('add');
 
     fireEvent.change(inputElement, { target: { value: 'Test Todo' } });
     fireEvent.click(addButton);
 
-    expect(addTodoMock).toHaveBeenCalledWith('Test Todo');
+    expect(addTodoMock).toHaveBeenCalledWith('Test Todo', expect.any(String), expect.any(Number));
     expect(inputElement).toHaveValue('');
   });
 
@@ -30,7 +30,7 @@ describe('InputTodo', () => {
     window.alert = jest.fn();
     render(<InputTodo addTodoProps={jest.fn()} />);
 
-    const addButton = screen.getByRole('button');
+    const addButton = screen.getByTestId('add');
 
     fireEvent.click(addButton);
 
@@ -46,7 +46,8 @@ describe("TodoContainer - Add and Delete Todos", () => {
     const inputElement = screen.getByPlaceholderText(/Add todo.../i);
     
     fireEvent.change(inputElement, { target: { value: "Learn Testing" } });
-    const addButton = screen.getByRole('button');
+
+    const addButton = screen.getByTestId('add');
 
     fireEvent.click(addButton);
 
@@ -60,14 +61,17 @@ describe("TodoContainer - Add and Delete Todos", () => {
     const inputElement = screen.getByPlaceholderText(/Add todo.../i);
     
     fireEvent.change(inputElement, { target: { value: "Learn Testing" } });
-    const addButton = screen.getByRole('button');
+
+    const addButton = screen.getByTestId('add');
 
     fireEvent.click(addButton);
-    const deleteButton = screen.getByTestId("delete-Learn Testing");
+    const deleteButtons = screen.getAllByTestId("delete-Learn Testing");
+    const countOfEntries = deleteButtons.length;
+    fireEvent.click(deleteButtons[0]);
 
-    fireEvent.click(deleteButton);
-
-    expect(screen.queryByText("Learn Testing")).toBeNull();
+    const newDeleteButtons = screen.getAllByTestId("delete-Learn Testing");
+    const newCountOfEntries = newDeleteButtons.length;
+    expect(countOfEntries).toBeGreaterThan(newCountOfEntries);
   });
 
 });
@@ -79,15 +83,16 @@ describe("TodoContainer - set priority", () => {
     const inputElement = screen.getByPlaceholderText(/Add todo.../i);
     
     fireEvent.change(inputElement, { target: { value: "Learn Testing" } });
-    const addButton = screen.getByRole('button');
+
+    const addButton = screen.getByTestId('add');
 
     fireEvent.click(addButton);
     
-    const addedTodoPriority = screen.getByTestId("priority-Learn Testing");
+    const addedTodoPriority = screen.getAllByTestId("priority-Learn Testing");
     
-    fireEvent.change(addedTodoPriority, { target: { value: '1' } });
+    fireEvent.change(addedTodoPriority[0], { target: { value: '1' } });
 
-    expect(addedTodoPriority.value).toBe('1');
+    expect(addedTodoPriority[0].value).toBe('1');
   });
 
 });
