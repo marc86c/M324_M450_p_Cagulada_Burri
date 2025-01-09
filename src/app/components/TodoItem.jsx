@@ -42,7 +42,7 @@ const TodoItem = (props) => {
   );
 
   return (
-    <li className={styles.item} data-type="todo-item">
+    <li className={styles.item} data-type="todo-item" >
       <div onDoubleClick={handleEditing} style={viewMode}>
         <input
           type="checkbox"
@@ -52,12 +52,14 @@ const TodoItem = (props) => {
           name="checkbox"
         />
         <input
+          data-testid={`priority-${title}`}
           type="number"
           value={priority || ""}
           onChange={(e) => props.changePriority(id, e.target.value)}
           className={styles.textInputPriority}
         />
         <button
+          data-testid={`delete-${title}`}
           data-set="delete-todo-btn"
           onClick={() => props.deleteTodoProps(id)}
         >
@@ -66,6 +68,7 @@ const TodoItem = (props) => {
         <span style={completed ? completedStyle : null}>{title}</span>
       </div>
       <input
+      data-testid={`input-${title}`}
         type="text"
         style={editMode}
         className={styles.textInput}
