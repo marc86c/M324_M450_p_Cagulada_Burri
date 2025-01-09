@@ -75,7 +75,7 @@
     - **Schritte:**
         1. Übergib eine unsortierte Liste von Aufgaben an `TodosList`.
         2. Überprüfe die Reihenfolge der gerenderten Aufgaben basierend auf ihrer Priorität.
-    - **Erwartung:** Aufgaben mit der Priorität „hoch“ erscheinen oben, gefolgt von „mittel“ und „niedrig“.
+    - **Erwartung:** Aufgaben mit der höchsten Priorität erscheinen oben, gefolgt von denen mit tieferen Prioritäten.
 
 ---
 
