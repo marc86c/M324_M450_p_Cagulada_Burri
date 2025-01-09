@@ -2,7 +2,7 @@
 
 ## 1. Akzeptanzkriterien und Testfälle
 
-### 1.1 Der Benutzer kann beim Erstellen einer Aufgabe eine Priorität auswählen (hoch, mittel, niedrig).
+### 1.1 Der Benutzer kann beim Erstellen einer Aufgabe eine Priorität auswählen (Zahlensystem 1 ist die höchste Priorität).
 
 **Komponente:** InputTodo  
 **Testfälle:**
@@ -12,12 +12,12 @@
     - **Schritte:**
         1. Rendere die InputTodo-Komponente.
         2. Überprüfe, ob das Textfeld und die Dropdown-Liste sichtbar sind.
-    - **Erwartung:** Beide Elemente sind sichtbar, die Standardpriorität ist „mittel“.
+    - **Erwartung:** Beide Elemente sind sichtbar, die niedrigste Priorität entspricht der höchsten Zahl.
 
 2. **Erstellen einer Aufgabe:**
     - **Ziel:** Verifizieren, dass die Aufgabe mit einer ausgewählten Priorität erstellt wird.
     - **Schritte:**
-        1. Gib einen Titel ein und wähle eine Priorität (z. B. „hoch“) aus.
+        1. Gib einen Titel ein und wähle eine Priorität (z. B. „2 “) aus.
         2. Klicke auf die Schaltfläche „Hinzufügen“.
     - **Erwartung:** Die `addTodoProps`-Funktion wird mit dem Titel und der Priorität aufgerufen.
 
