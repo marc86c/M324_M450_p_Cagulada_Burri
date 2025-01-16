@@ -70,13 +70,14 @@ const InputTodo = (props) => {
         }}
       />
       <input
+        data-testid="dueDate-add"
         type="date"
         className="input-date"
         value={inputText.dueDate}
         name="dueDate"
         onChange={onChange} // Fälligkeitsdatum aktualisieren
       />
-      <button data-set="add-todo-btn" className="input-submit">
+      <button data-set="add-todo-btn" className="input-submit" data-testid="add">
         <FaPlusCircle />
       </button>
     </form>
