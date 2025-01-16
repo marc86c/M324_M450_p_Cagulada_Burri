@@ -34,3 +34,14 @@ Dieses Mal konnten die Unittests abgeschlossen werden.
 
 ### Reflexion
 
+## Ende des Projekts
+
+### Reflexion
+
+### Reflexion Maurizio Burri
+
+### Reflexion Marc Cagulada
+
+Ich finde, wir haben den Auftrag insgesamt gut erledigen können. Am Anfang hatten wir einige Schwierigkeiten in der Kommunikation, aber das hat sich im Laufe der Zeit deutlich verbessert. Durch Gespräche und bessere Organisation konnten wir die Aufgaben klar aufteilen, sodass jeder in seinem eigenen Tempo arbeiten konnte. Die geringe Abhängigkeit voneinander hat dazu beigetragen, dass es kaum Konflikte gab und wir effizient vorankamen.
+
+Natürlich gab es kleinere Herausforderungen, zum Beispiel in der Abstimmung, was gelegentlich zu Missverständnissen führte. Diese konnten wir jedoch schnell lösen. Insgesamt war es eine wertvolle Erfahrung, bei der wir gelernt haben, wie wichtig klare Kommunikation und Struktur sind. Damit sind wir für zukünftige Projekte besser vorbereitet. 	
