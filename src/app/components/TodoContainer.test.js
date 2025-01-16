@@ -77,9 +77,7 @@ describe("TodoContainer - set dueDate", () => {
     let addedTodo = screen.getByText("SetDueDateTest");
     expect(addedTodo).toBeInTheDocument();
 
-
-    //not working man :C
-    addedTodo = screen.getByTestId("dueDate-1900");
+    addedTodo = screen.getByTestId("dueDate-SetDueDateTest");
     expect(addedTodo).toBeInTheDocument();
   });
 

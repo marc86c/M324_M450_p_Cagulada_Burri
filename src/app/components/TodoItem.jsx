@@ -73,12 +73,12 @@ const TodoItem = (props) => {
         <button
           data-testid={`delete-${title}`}
           data-set="delete-todo-btn"
-          onClick={() => props.deleteTodoProps(id)}
+          onClick={() => props.deleteTodoProps(id)} 
         >
           <FaTrash style={{ color: "orangered", fontSize: "16px" }} />
         </button>
         <span style={completed ? completedStyle : null}>{title}</span>
-        <span className={styles.dueDate} style={duestyle} data-testid={`dueDate-${new Date(dueDate).getFullYear()}`}>
+        <span className={styles.dueDate} style={duestyle} data-testid={`dueDate-${title}`}>
           {` - ${dueDate}` ? ` - Due: ${new Date(dueDate).toLocaleDateString()}` : ""}
         </span>
       </div>
