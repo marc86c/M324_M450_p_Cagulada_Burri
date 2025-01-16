@@ -20,3 +20,17 @@ An diesem Tag war Herr Burri krank, darum konnte nur Herr Cagulada daran arbeite
 
 ### Reflexion
 Dieses Mal konnte nicht viel erledigt werden, da nur ein Teammitglied abwesend war und noch andere Projekte im Weg standen. Das nächte Mal müssen wir deutlich mehr an diesem Projekt arbeiten, um gut voranzukommen.
+
+## 09.01.2025
+### Aufgaben
+An diesem Tag konnten wir viel erledigen. Wir haben das Testkonzept verfeinert mit Details und kleine Korrekturen getätigt. Ausserdem konnte das Testkonzept mit Unittests abgedeckt werden Unittests. Zuletzt haben wir noch mit Cypress als E2E begonnen.
+
+### Reflexion
+Wir haben an diesem Tag sehr konzentriert und fleissig gearbeitet. Die Unittests haben aber einige Probleme verursacht, oft wurden Elemente nicht gefunden oder sogar doppelt. Schlussendlich konnten aber einige Tests vollendet werden und diese laufen auch in der Pipeline, welche wir bereits erstellt hatten. Das Aufsetzen von Cypress war auch recht schwierig, wir kamen aber recht weit.
+
+## 16.01.2025
+### Aufgaben
+Dieses Mal konnten die Unittests abgeschlossen werden.
+
+### Reflexion
+
